@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVNTest", "SVNTest\SVNTest.csproj", "{8FC3443F-AB31-42B7-808C-87F420B2A756}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FC3443F-AB31-42B7-808C-87F420B2A756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC3443F-AB31-42B7-808C-87F420B2A756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC3443F-AB31-42B7-808C-87F420B2A756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC3443F-AB31-42B7-808C-87F420B2A756}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
