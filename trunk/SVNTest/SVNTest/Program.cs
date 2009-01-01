@@ -8,7 +8,7 @@ namespace SVNTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Fuck you, dick sucker!");
+            Console.WriteLine("Fuck you");
         }
     }
 }
