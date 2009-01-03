@@ -4,16 +4,15 @@
 A Timing class which work with python WITH statement can get how much time
 the enclosing context runs. See sample usage below.
 '''
-
-from datetime import datetime
+import time
 
 class Timing(object):
   def __enter__(self):
-    self.__start = datetime.now()
+    self.__start = time.clock()
     return self
 
   def __exit__(self, exc_type, exc_value, traceback):
-    self.__end = datetime.now()
+    self.__end = time.clock()
     self.Timing = self.__end - self.__start
 
   def __str__(self):
