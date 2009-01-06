@@ -50,6 +50,7 @@ class Crawler(Process):
       try:
         print 'opening:', request
         response = urllib2.urlopen(request, timeout=MAX_REQUEST_TIME)
+	print 'reading...'
         result = response.read(MAX_PAGE_SIZE)
         if len(result) == MAX_PAGE_SIZE:
           print 'Page size exceeds maximum'
@@ -66,6 +67,6 @@ if __name__ == '__main__':
   c.start()
   c.add_request('http://www.microsoft.com')
   # The second request will fail.
-	if not c.add_request('http://www.microsoft.com'):
-		print 'add failed'
-  #c.join()
+  if not c.add_request('http://www.microsoft.com'):
+    print 'add failed'
+  c.join()
