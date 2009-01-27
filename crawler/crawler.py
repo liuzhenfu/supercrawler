@@ -8,7 +8,7 @@ A crawler process which is used to crawling a url.
 # Config.
 
 # Maximum HTTP request waiting time.
-MAX_REQUEST_TIME = 3 
+MAX_HTTP_REQUEST_TIME = 3 
 
 # Maximum response page size 512K.
 MAX_PAGE_SIZE = 2**19
@@ -101,14 +101,14 @@ class Crawler(Process):
 
 			self.GPR.put((type, self.name, t.Timing, request, end_url, headers, content))
 
-			if t.Timing > MAX_REQUEST_TIME:
+			if t.Timing < MAX_REQUEST_TIME:
 				# Add itself to crawlers_queue to tell scheduler I'm ready to do the next job.
 				self.__crawlers_queue.put(self.id)
 	
 	@Retry(MAX_RETRY)
 	def _send_request(self, request, retry):
-		print 'opening:', request
-		response = urllib2.urlopen(request, timeout=MAX_REQUEST_TIME)
+		print '[', self.name, ']', ' opening:', request
+		response = urllib2.urlopen(request, timeout=MAX_HTTP_REQUEST_TIME)
 		print 'reading...'
 		content = response.read(MAX_PAGE_SIZE)
 		end_url = response.url
