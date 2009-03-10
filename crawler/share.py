@@ -12,7 +12,7 @@ Each item is a 7-tuple
   share.URL_PARSE_ERROR
   share.SIZE_LIMIT_ERROR
   share.DNS_ERROR
-  global.UNKOWN_ERROR
+  share.UNKOWN_ERROR
   share.OK
   type can also be a integer representing the error code returned by HTTP server.
 
